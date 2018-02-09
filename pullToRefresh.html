@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://devinnn.cn/assets/image/logo.ico" type="image/x-icon">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"
+          rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>下拉刷新</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #scroll-content {
+            height: 80px;
+            line-height: 80px;
+            font-size: 18px;
+            color: #000;
+            margin-top: -80px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #wrapper .content {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            background-color: aquamarine;
+            font-size: 16px;
+        }
+
+        #wrapper .content:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="scroll-content">
+            <span id="scollIcon">
+                <i class="fa fa-spinner fa-spin"></i>
+            </span>
+            <span id="scrollText"></span>
+        </div>
+        <div id="wrapper">
+            <div class="content">
+                1
+            </div>
+            <div class="content">
+                2
+            </div>
+            <div class="content">
+                3
+            </div>
+            <div class="content">
+                4
+            </div>
+            <div class="content">
+                5
+            </div>
+            <div class="content">
+                6
+            </div>
+            <div class="content">
+                7
+            </div>
+            <div class="content">
+                8
+            </div>
+            <div class="content">
+                9
+            </div>
+            <div class="content">
+                10
+            </div>
+            <div class="content">
+                11
+            </div>
+            <div class="content">
+                12
+            </div>
+            <div class="content">
+                13
+            </div>
+            <div class="content">
+                14
+            </div>
+        </div>
+    </div>
+    <script src="./pullToRefresh.js"></script>
+    <script>
+        pullToRefresh.init({
+            dom: '#main',
+            scrollContentEl: '#scroll-content',
+            scrollIconEl: '#scollIcon',
+            scrollTextEl: '#scrollText'
+        })
+    </script>
+</body>
+
+</html>

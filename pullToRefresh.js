@@ -100,6 +100,11 @@
 
             dom.addEventListener('touchmove', (event) => {
 
+                // 快速触摸可能导致startY为0
+                if(startY === 0) {
+                    return false;
+                } 
+
                 if (refreshStatus) {
                     event.preventDefault();
                     return false;
